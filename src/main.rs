@@ -8,7 +8,7 @@ struct Opt {
     #[structopt(short, long, default_value="10000")]
     iterations: usize,
 
-    #[structopt(short, long, default_value="0.05")]
+    #[structopt(short, long, default_value="0.0002")]
     droprate: f64
 }
 
