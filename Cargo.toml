@@ -3,6 +3,9 @@ name = "osrs-sim"
 version = "0.1.0"
 authors = ["kyle <kylekroll@outlook.com>"]
 edition = "2018"
+description = "An Old School RuneScape drop simulator"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/kyle-kroll/osrs-sim"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
