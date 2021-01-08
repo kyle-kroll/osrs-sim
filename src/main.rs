@@ -35,6 +35,8 @@ fn main() {
     // parse droprate from command line args
     let droprate: f64 = Opt::from_args().droprate;
 
+    println!("Starting simulation using the following parameters:\n\tIterations: {}\n\tDroprate: {}", iterations, droprate);
+
     // Pre-allocate an array so it can be iterated through
     let mut rolls: Vec<i32> = vec![1; iterations];
     let start = Instant::now();
@@ -45,9 +47,7 @@ fn main() {
     println!("{:?} iterations/second", (iterations as f32 /Duration::as_secs_f32(&duration)) as f32);
 
     rolls.sort();
-    let mid = rolls.len() / 2;
-    println!("Median rolls needed to get the drop: {:?}", rolls[mid]);
-
-    let nf: usize = (rolls.len() as f64 * 0.75) as usize;
-    println!("75th percentile: {:?}", rolls[nf]);
+    println!("25th percentile: {:?}", rolls[(rolls.len() as f64 * 0.25) as usize]);
+    println!("50th percentile: {:?}", rolls[rolls.len() / 2]);
+    println!("75th percentile: {:?}", rolls[(rolls.len() as f64 * 0.75) as usize]);
 }
