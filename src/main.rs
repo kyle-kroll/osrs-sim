@@ -5,7 +5,7 @@ use rayon::prelude::*;
 #[derive(Debug, StructOpt)]
 #[structopt(name = "OSRS-DS", about = "A drop simulator for Old School RuneScape!")]
 struct Opt {
-    #[structopt(short, long, default_value="10000")]
+    #[structopt(short, long, default_value="1000000")]
     iterations: usize,
 
     #[structopt(short, long, default_value="0.0002")]
